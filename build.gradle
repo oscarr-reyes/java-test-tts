@@ -9,6 +9,22 @@ repositories {
     mavenCentral()
 }
 
+task runTTSGcloud(type: JavaExec) {
+    group = "Execution"
+    description = "Run the gcloud code example"
+
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'dev.oscarreyes.tts.gcloud.Main'
+}
+
+task runTTSAWS(type: JavaExec) {
+    group = "Execution"
+    description = "Run the AWS code example"
+
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'dev.oscarreyes.tts.aws.Main'
+}
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 
