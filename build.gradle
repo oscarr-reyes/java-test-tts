@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'dev.oscarreyes'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // GCloud TTS dependencies
+    implementation 'com.google.cloud:google-cloud-texttospeech:1.4.0'
+
+    // AWS Polly (TTS) dependencies
+    implementation 'software.amazon.awssdk:polly:2.16.43'
+    implementation 'javazoom:jlayer:1.0.1'
+}
